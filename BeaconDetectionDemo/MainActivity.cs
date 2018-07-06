@@ -52,7 +52,7 @@ namespace BeaconDetectionDemo
 
         public void DidRangeBeaconsInRegion(ICollection<Beacon> p0, Region p1)
         {
-            if (p0.Count <= 0)
+            if (!p0.Any())
                 return;
 
             RunOnUiThread(() => {
